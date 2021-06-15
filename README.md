@@ -4,10 +4,10 @@
 - Cinema - AB*C
     * Implementar Functions para cálculos e controle de estoque se houver possibilidade
     * Implementar triggers
-- Papelaria - Controle de estoque - AB*C-D 
+- Papelaria - Controle de estoque - AB-*C-D 
     * Testar novas TRIGGERS
-- Funcionário - AB*C*D
-- Escola - AB*C*D
+- Funcionário - AB-*C-D
+- Escola - AB-*C-D
     * Implementar novas entidades e utilizar de conceito o banco de papelaria para controle de materiais (Biblioteca)
 - Correntista - A*B
 - Salgrade - AB*C
