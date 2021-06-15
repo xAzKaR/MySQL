@@ -1,0 +1,54 @@
+#Apagar Banco de dados se existir
+#DROP DATABASE IF EXISTS Papelaria;
+
+#Criação da Base de dados
+CREATE DATABASE IF NOT EXISTS Papelaria;
+
+USE Papelaria;
+
+
+CREATE TABLE IF NOT EXISTS produto 
+(
+id INT NOT NULL AUTO_INCREMENT,
+status CHAR(1) NOT NULL DEFAULT 'A', /*A para ativo, I para inativo*/
+descricao VARCHAR(50) NULL DEFAULT NULL,
+estoque_minimo INT NULL DEFAULT NULL,
+estoque_maximo INT NULL DEFAULT NULL,
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS entrada_produto 
+(
+id INT NOT NULL AUTO_INCREMENT,
+id_produto INT NULL DEFAULT NULL,
+qtde INT NULL DEFAULT NULL,
+valor_unitario DECIMAL(9.2) NULL DEFAULT '0.00',
+data_entrada DATE NULL DEFAULT NULL,
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS estoque 
+(
+id INT NOT NULL AUTO_INCREMENT,
+id_produto INT NULL DEFAULT NULL,
+qtde INT NULL DEFAULT NULL,
+valor_unitario DECIMAL(9.2) NULL DEFAULT '0.00',
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE saida_produto 
+(
+id INT NOT NULL AUTO_INCREMENT,
+id_produto INT NULL DEFAULT NULL,
+qtde INT NULL DEFAULT NULL,
+data_saida DATE NULL DEFAULT NULL,
+valor_unitario DECIMAL(9.2) NULL DEFAULT '0.00',
+PRIMARY KEY (id)
+);
+
