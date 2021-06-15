@@ -1,7 +1,16 @@
 - Projetos em andamento:
 - Hospital - ABC*D
+    * Implementar triggers de acordo com o modelo de negócio do PI
 - Cinema - AB*C
-- Papelaria - Controle de estoque - AB-*C-*D
+    * Implementar Functions para cálculos e controle de estoque se houver possibilidade
+    * Implementar triggers
+- Papelaria - Controle de estoque - AB*C-D 
+    * Testar novas TRIGGERS
+- Funcionário - AB*C*D
+- Escola - AB*C*D
+    * Implementar novas entidades e utilizar de conceito o banco de papelaria para controle de materiais (Biblioteca)
+- Correntista - A*B
+- Salgrade - AB*C
 
 
 - Categorias trabalhadas:
