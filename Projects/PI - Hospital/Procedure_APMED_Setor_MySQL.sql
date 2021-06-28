@@ -11,25 +11,26 @@ END $$
 DELIMITER ;
 
 DROP PROCEDURE IF EXISTS prc_inserir_setor_apmedNI;
-CALL apmed2.prc_inserir_setor_apmedNI(11, 'Ortopedia', 'Gesso', 20, 1);
-
+CALL apmed2.prc_inserir_setor_apmedNI(1, 'Ortopedia', 'Gesso', 20, 14);
+SELECT * FROM setor;
 
 
 # Procedure para inserção de Setor #
 DELIMITER $$
 CREATE PROCEDURE
-prc_inserir_setor_apmed (IN especialidade_setor VARCHAR (45), categ_setor VARCHAR(45), capac_setor INT, hosp_id_hosp INT )
+prc_inserir_setor_apmed (IN espec_setor VARCHAR(45), cat_setor VARCHAR(45), cap_setor INT, hospital_id_hosp INT)
 BEGIN
 
-		INSERT INTO setor (espec_setor, cat_setor, cap_setor, hospital_id_hosp)
-		VALUES (especialidade_setor, categ_setor, capac_setor, hosp_id_hosp);
+		INSERT INTO setor (espec_setor, cat_setor,cap_setor, hospital_id_hosp)
+		VALUES (espec_setor, cat_setor,cap_setor, hospital_id_hosp);
         SELECT * FROM setor;
 
 END $$
 DELIMITER ;
 
+SELECT * FROM hospital;
 DROP PROCEDURE IF EXISTS prc_inserir_setor_apmed;
-CALL apmed2.prc_inserir_setor_apmed('Ortopedia', 'Gesso', 20, 1);
+CALL apmed2.prc_inserir_setor_apmed('Ortopedia', 'Gesso', 20, 14);
 /*
 INSERT INTO hospital (cnpj_hosp, raz_hosp, cep_hosp, end_hosp, tel_hosp, email_hosp)
 VALUES ('02.560.878/0001-07', 'HOSPITAL ANCHIETA - LTDA', '72115-700', 
