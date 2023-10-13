@@ -11,14 +11,6 @@ CREATE DATABASE IF NOT EXISTS cinema;
 #Utilizando/Selecionando um banco de dados criado#
 USE cinema;
 
-/* ####Backup####
-CREATE TABLE nomenome
-(
-nomenome INT PRIMARY KEY,
-nomenome VARCHAR(100)
-);
-*/
-
 
 
 #Tabela Cinema#
@@ -50,13 +42,6 @@ cinema_cod_cine INT,
     FOREIGN KEY (`cinema_cod_cine`) REFERENCES `funcionarios`.`cinemas` (`cod_cine`)
     ON UPDATE CASCADE ON DELETE CASCADE
 );
-
-
-
-/*
-ALTER TABLE `cinema`.`funcionarios`
-ADD cod_serv INT, cod_filme INT, cod_ingr INT, cod_cli INT, cod_ped INT;
-*/
 
 
 
@@ -168,17 +153,6 @@ sala_cod_sala INT,
 	ON UPDATE CASCADE ON DELETE CASCADE
 
 );
-
-
-
-
-/*
-ALTER TABLE salas
-ADD capac_sala INT;
-
-ALTER TABLE salas
-MODIFY capac_sala INT;
-*/
 
 
 

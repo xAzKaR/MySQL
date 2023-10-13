@@ -78,7 +78,7 @@ DELIMITER ;
 -- UPDATE DE PACIENTE --
 SELECT * from paciente;
 DROP PROCEDURE prc_update_paciente_apmed;
-CALL apmed2.prc_update_paciente_apmed(1, '260.665.310-69', 'Adélia Cartaxo Quinterno', '19931210', 'Brasileiro', 'F', 'Auxiliar Administrativo', 'Quadra 17 - Asa Sul',
+CALL apmed2.prc_update_paciente_apmed(1, '260.665.310-69', 'Josélia Cartaxo Quinterno', '19931210', 'Brasileiro', 'F', 'Auxiliar Administrativo', 'Quadra 17 - Asa Sul',
 '(61) 9 9936-7731', 'adeliana@hotmail.com', 1, 1, 1);
 
 
@@ -95,5 +95,5 @@ END $$
 DELIMITER ;
 
 DROP PROCEDURE prc_delete_paciente_apmed;
-CALL apmed2.prc_delete_paciente_apmed(8);
+CALL apmed2.prc_delete_paciente_apmed(1);
 

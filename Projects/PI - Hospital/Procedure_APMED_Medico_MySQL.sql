@@ -18,10 +18,11 @@ DELIMITER ;
 # Script responsável por remover uma procedure
 DROP PROCEDURE IF EXISTS prc_inserir_medico_apmedNI;
 # Script responsável por chamar a procedure
-CALL apmed2.prc_inserir_medico_apmedNI(1 ,'1234', '000.998.727-89', 'Leonardo De Amaral', 19900312, 'Brasileiro', 'M', 
+CALL apmed2.prc_inserir_medico_apmedNI(5 ,'1234', '000.998.727-89', 'Leandro de Amaral', 19900312, 'Brasileiro', 'M', 
 'QNN 14 Lote 3 Apto 9', 'Neurologia', '(61) 9 9999-0909', 'leandro@medico.com', 1, 1);
 
-
+        SELECT * FROM medico;
+		SELECT * FROM `apmed_bk`.`medico_bk`;
 
 
 /* BACKUP de inserção de médicos
@@ -55,7 +56,7 @@ DELIMITER ;
 # Script responsável por dropar a procedure
 DROP PROCEDURE IF EXISTS prc_inserir_medico_apmed;
 # Script responsável por chamar a procedure de inserção
-CALL apmed2.prc_inserir_medico_apmed('1234', '000.998.727-89', 'Leonardo De Amaral', 19900312, 'Brasileiro', 'M', 
+CALL apmed2.prc_inserir_medico_apmed('1234', '000.998.727-89', 'Leandro de Amaral', 19900312, 'Brasileiro', 'M', 
 'QNN 14 Lote 3 Apto 9', 'Neurologia', '(61) 9 9999-0909', 'leandro@medico.com', 1, 1);
 
 
@@ -80,7 +81,7 @@ DELIMITER ;
 
 SELECT * from medico;
 DROP PROCEDURE prc_update_medico_apmed;
-CALL apmed2.prc_update_medico_apmed(6 ,'1234', '000.998.727-89', 'Alacharabasuia', 19900312, 'Brasileiro', 'M', 
+CALL apmed2.prc_update_medico_apmed(9 ,'1234', '000.998.727-89', 'Alacharabasuia', 19900312, 'Brasileiro', 'M', 
 'QNN 14 Lote 3 Apto 9', 'Neurologia', '(61) 9 9999-0909', 'leandro@medico.com', 1, 1);
 
 
@@ -99,5 +100,5 @@ DELIMITER ;
 # Script responsável por dropar a procedure
 DROP PROCEDURE prc_delete_medico_apmed;
 # Script responsável por chamar a procedure para deleção de médico
-CALL apmed2.prc_delete_medico_apmed(5);
+CALL apmed2.prc_delete_medico_apmed(10);
 
